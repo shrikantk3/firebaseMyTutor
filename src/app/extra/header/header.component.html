@@ -1,0 +1,10 @@
+<mat-card color="primary">
+    <h2 style="display:inline-block">MyTutor Application</h2>
+    <section style="float:right">
+        <button mat-raised-button [matMenuTriggerFor]="menu">Themes</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="themeChange(1)">Theme 1</button>
+            <button mat-menu-item (click)="themeChange(2)">Theme 2</button>
+        </mat-menu>
+    </section>
+</mat-card>

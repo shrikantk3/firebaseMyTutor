@@ -1,0 +1,16 @@
+<section style="display: inline-flex">
+    <mat-card style="width:45%; margin:0 15px 30px 0;" *ngFor="let courses of coursesList[0]; let i = index">
+        <!-- {{courses| json}} -->
+        <mat-card-header>
+            <h1 style="font-size:30px; min-height:90px;" mat-card-title>{{courses?.course_name | titlecase}}</h1>
+        </mat-card-header>
+        <mat-card-content>
+            <h1>Course ID : {{courses?.course_id | uppercase}}</h1>
+            <h2>Price :{{courses?.course_price | currency}} USD</h2>
+            <p>Duration :{{courses?.duration}} months</p>
+        </mat-card-content>
+        <mat-card-footer>
+            <button mat-raised-button color="primary" [routerLink]="['course/', 'QbtygbEUTKc5DW7FFcQC']" appFullWidth>Start Free Trial &nbsp;&nbsp;<mat-icon>camera</mat-icon> </button>
+        </mat-card-footer>
+    </mat-card>
+</section>

@@ -1,0 +1,92 @@
+{{course | json}}
+<mat-card>
+    <div class="container swiper-container mt20">
+        <div class="swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="card-body swiper-content p0">
+                    <div class="hero new-york">
+                        <div class="calendar">
+                            <span class="date">
+                                27
+                            </span>
+                            <span class="month">
+                                MAR
+                            </span>
+                        </div>
+                        <div class="photo-btn">
+                            <div class="text">{{course?.course_id | uppercase}} {{course?.volume}}
+                            </div>
+                            <div class="gallery">
+                                <div class="row top">
+                                    <div class="image one">
+                                    </div>
+                                    <div class="image two">
+                                    </div>
+                                    <div class="image three">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copy">
+                        <h1>{{course?.course_name | titlecase}}</h1>
+                        <h3>The city that never sleeps.</h3>
+                       <p><b>Privce : </b>{{course?.course_price | currency}} USD</p>
+                       <p>{{course?.description}}</p>
+                       <div class="footer">
+                            <div class="time">
+                                <div><b>Duration : </b> {{course?.duration}} Months</div>
+                            </div>
+                            <div class="comments">
+                                <!-- <div>{{}}</div> -->
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <article>
+                            <h1>Available Tutor for this course:</h1>
+                            <mat-card *ngFor="let id of course?.teachers;" style="max-width:300px; width:100%; display: inline-block; margin:0 15px 20px 0;">
+                                <mat-card-header>
+                                    {{id}}
+                                </mat-card-header>
+                                <mat-card-content *ngFor="let teacher of getTeacherDetails()">  
+                                     {{getTeacherDetails()}}
+                                </mat-card-content>
+                            </mat-card>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>
+</mat-card>
+<br>
+<div class="discussion-container">
+    <div class="video-content">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h2>Video Descussion</h2>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                Start Video
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="chat-content">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h2>Chat Descussion</h2>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                Chat Content
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

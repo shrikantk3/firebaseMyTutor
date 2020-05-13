@@ -1,0 +1,319 @@
+.mt20{
+    margin-top:20px;
+  }
+  .p0{
+    padding:0px;
+  }
+  body{
+    background:#333
+  }
+  .swiper-container{
+    .swiper-slide {
+      min-width: 400px;
+      height: auto;
+      padding: 5px;
+      .swiper-content{
+        background-color: #fff;
+        .hero {
+          width: 100%;
+          height: 175px;
+          position: relative;
+          .calendar {
+            width: 60px;
+            height: 60px;
+            float: right;
+            background-color: darkred;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-top: 15px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .date {
+              font-size: 1.2rem;
+              line-height: 1.3rem;
+            }
+            .month {
+              font-size: .8rem;
+            }
+          }
+          .photo-btn {
+            position: absolute;
+            bottom: 0;
+            width: 100px;
+            height: 40px;
+            background-color: darkred;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: #fff;
+            transition: .2s all;
+            cursor: pointer;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            &:hover {
+              width: 100%;
+              height: 100%;
+              transition: .2s all;
+              .text {
+                display: none;
+              }
+              .gallery {
+                display: flex;
+              }
+            }
+            .text {
+              text-align: center;
+              line-height: 40px;
+            }
+            .gallery {
+              width: 100%;
+              display: none;
+              flex-direction: column;
+              .row {
+                width: 100%;
+                height: 34%;
+                display: flex;
+                .image {
+                  opacity: .6;
+                  width: 34%;
+                  height: 100%;
+                  display: inline-block;
+                  transition: .2s all;
+                  &:hover {
+                    opacity: 1;
+                    transition: .2s all;
+                  }
+                }
+              }
+            }
+          }
+          &.new-york {
+            background: url("https://daytripsontario.files.wordpress.com/2017/03/img_6859-copy.jpg");
+            background-position: center;
+            background-size: cover;
+            .top {
+              .image {
+                &.one {
+                  background: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://medicalcannabiscultivation.com/wp-content/uploads/2018/03/NY.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nycgo.com/images/made/images/uploads/articles/NYC_in_3_Days/TimesSquare-TaggerYanceyIV_900_600_70.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+            .middle {
+              .image {
+                &.one {
+                  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS7O-nPTS9BLCUX-uV1jihGs2QetTViwoOhUK0jctN6QLhITWCKA");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://cdn.vox-cdn.com/thumbor/L9EthniNFveihyyk7EQSOhsx9_8=/0x0:3000x2002/1200x800/filters:focal(1260x761:1740x1241)/cdn.vox-cdn.com/uploads/chorus_image/image/55473705/uppereastside.0.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nps.gov/subjects/urban/images/new-york.JPG?maxwidth=1200&maxheight=1200&autorotate=false");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+            .bottom {
+              .image {
+                &.one {
+                  background: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://medicalcannabiscultivation.com/wp-content/uploads/2018/03/NY.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nycgo.com/images/made/images/uploads/articles/NYC_in_3_Days/TimesSquare-TaggerYanceyIV_900_600_70.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+          }
+          &.san-fran {
+            background: url("http://s3.envato.com/files/241747423/20171202-North-Beach-p4p-0197-4mp.jpg");
+            background-position: center;
+            background-size: cover;
+            .top {
+              .image {
+                &.one {
+                  background: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://medicalcannabiscultivation.com/wp-content/uploads/2018/03/NY.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nycgo.com/images/made/images/uploads/articles/NYC_in_3_Days/TimesSquare-TaggerYanceyIV_900_600_70.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+            .middle {
+              .image {
+                &.one {
+                  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS7O-nPTS9BLCUX-uV1jihGs2QetTViwoOhUK0jctN6QLhITWCKA");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://cdn.vox-cdn.com/thumbor/L9EthniNFveihyyk7EQSOhsx9_8=/0x0:3000x2002/1200x800/filters:focal(1260x761:1740x1241)/cdn.vox-cdn.com/uploads/chorus_image/image/55473705/uppereastside.0.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nps.gov/subjects/urban/images/new-york.JPG?maxwidth=1200&maxheight=1200&autorotate=false");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+            .bottom {
+              .image {
+                &.one {
+                  background: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://medicalcannabiscultivation.com/wp-content/uploads/2018/03/NY.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nycgo.com/images/made/images/uploads/articles/NYC_in_3_Days/TimesSquare-TaggerYanceyIV_900_600_70.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+          }
+          &.chicago {
+            background: url("https://i2.wp.com/www.maven.co/wp-content/uploads/2014/07/Chicago-Skyline.jpg?ssl=1");
+            background-position: center;
+            background-size: cover;
+            .top {
+              .image {
+                &.one {
+                  background: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://medicalcannabiscultivation.com/wp-content/uploads/2018/03/NY.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nycgo.com/images/made/images/uploads/articles/NYC_in_3_Days/TimesSquare-TaggerYanceyIV_900_600_70.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+            .middle {
+              .image {
+                &.one {
+                  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS7O-nPTS9BLCUX-uV1jihGs2QetTViwoOhUK0jctN6QLhITWCKA");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://cdn.vox-cdn.com/thumbor/L9EthniNFveihyyk7EQSOhsx9_8=/0x0:3000x2002/1200x800/filters:focal(1260x761:1740x1241)/cdn.vox-cdn.com/uploads/chorus_image/image/55473705/uppereastside.0.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nps.gov/subjects/urban/images/new-york.JPG?maxwidth=1200&maxheight=1200&autorotate=false");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+            .bottom {
+              .image {
+                &.one {
+                  background: url("https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.two {
+                  background: url("https://medicalcannabiscultivation.com/wp-content/uploads/2018/03/NY.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+                &.three {
+                  background: url("https://www.nycgo.com/images/made/images/uploads/articles/NYC_in_3_Days/TimesSquare-TaggerYanceyIV_900_600_70.jpg");
+                  background-size: cover;
+                  background-position: center;
+                }
+              }
+            }
+          }
+        }
+        .copy {
+          padding: 20px;
+        }
+        .footer {
+          position: absolute;
+        //   bottom: 0;
+        //   margin-top:20px;
+          margin-bottom: 35px;
+          color: graytext;
+          .time {
+            display: inline-block;
+          }
+          .comments {
+            display: inline-block;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: .2s all;
+            &:hover {
+              color: darkred;
+              transition: .2s all;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .discussion-container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    align-content:stretch;
+    .video-content{
+      width:60%;
+    }
+    .chat-content{
+      width:40%;
+    }
+  }
