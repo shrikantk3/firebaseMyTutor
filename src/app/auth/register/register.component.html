@@ -1,7 +1,7 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form [formGroup]="loginForm"  class="login100-form validate-form" (submit)="onSubmit(loginForm)" >
+            <form [formGroup]="loginForm"  class="login100-form validate-form" (submit)="signUpFn(loginForm)" >
                 <span class="login100-form-title p-b-26">
                     Registration
                 </span>
@@ -18,6 +18,13 @@
                     </span>
                     <input class="input100" type="password" name="pass" formControlName="password" required>
                     <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Comfirm password">
+                    <span class="btn-show-pass">
+                        <i class="zmdi zmdi-eye"></i>
+                    </span>
+                    <input class="input100" type="password" name="pass" formControlName="re_password" required>
+                    <span class="focus-input100" data-placeholder="Comfirm Password"></span>
                 </div>
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">

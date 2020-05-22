@@ -1,10 +1,26 @@
 <mat-card color="primary">
     <h2 style="display:inline-block">MyTutor Application</h2>
-    <section style="float:right">
-        <button mat-raised-button [matMenuTriggerFor]="menu">Themes</button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="themeChange(1)">Theme 1</button>
-            <button mat-menu-item (click)="themeChange(2)">Theme 2</button>
-        </mat-menu>
+    <section style="float:right;display: flex">
+        <article>
+            <button mat-icon-button [matMenuTriggerFor]="notifi">
+                <mat-icon>notifications</mat-icon>
+            </button>
+            <mat-menu #notifi="matMenu">
+                <button *ngFor="let n of notifications"> {{n.titile}} </button>
+            </mat-menu>
+        </article>
+        <article>
+            <button mat-button [matMenuTriggerFor]="menu" class="profile_menu">
+                <figure>
+                    <img [src]="user.photoURL?user.photoURL:'../../../assets/user.jpg'" alt="profile" />&nbsp;&nbsp;
+                    <figcaption>{{user.displayName?user.displayName:user.email}}</figcaption>
+                </figure>
+                </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="themeChange(1)"><mat-icon>perm_contact_calendar</mat-icon> Profile</button>
+                <button mat-menu-item (click)="logoutMe()"><mat-icon>settings_power</mat-icon> Logout</button>
+            </mat-menu>
+        </article>
     </section>
 </mat-card>
+{{notifications | json}}

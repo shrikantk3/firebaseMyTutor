@@ -4,6 +4,10 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { MatCardModule } from '@angular/material/card';
 import { FullWidthDirective } from './full-width.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { howler } from 'howler'
+
+
+
 @NgModule({
   declarations: [CourseDetailsComponent, FullWidthDirective],
   imports: [

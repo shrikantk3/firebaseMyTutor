@@ -27,12 +27,13 @@
                         </button>
                     </div>
                 </div>
+                <button (click)="googleSignin()">Google login</button>
                 <div class="text-center p-t-115">
                     <span class="txt1">
                         Don’t have an account?
                     </span>
-                    <a class="txt2" [routerLink]="['/register']">
-                        Sign Up
+                    <a class="txt2" [routerLink]="['auth/register']">
+                        Sign Up here
                     </a>
                 </div>
             </form>

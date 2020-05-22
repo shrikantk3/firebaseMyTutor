@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ActivatedRoute } from '@angular/router';
 import { AppServiceService } from "../../app-service.service";
+// import {  } from '';
 
 @Component({
   selector: 'app-course-details',
@@ -17,8 +18,8 @@ export class CourseDetailsComponent implements OnInit {
     private _routes:ActivatedRoute,
     private _api:AppServiceService
   ) { 
-    this.course_id = this._routes.snapshot.params['id'];
-    this._api.getDocDetails('cources', this.course_id).then(res=>{
+      this.course_id = this._routes.snapshot.params['id'];
+      this._api.getDocDetails('cources', this.course_id).then(res=>{
       this.course = res;
     });
   }

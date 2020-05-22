@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from "@angular/material/card";
 import { MatMenuModule } from '@angular/material/menu'
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule }from '@angular/material/icon'
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
@@ -12,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     MatCardModule,
     MatMenuModule,
+    MatIconModule,
     MatButtonModule
   ],
   exports:[HeaderComponent, FooterComponent],
