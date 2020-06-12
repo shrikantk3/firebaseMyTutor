@@ -1,3 +1,4 @@
 <section [ngClass]="theme" (themeChang)="getchangeTheme($event)">
         <router-outlet></router-outlet>
 </section>
+<mat-spinner color="primary" class="spinner" *ngIf="loader"></mat-spinner>

@@ -2,7 +2,12 @@
 
 <mat-drawer-container class="example-container" color="primary">
     <mat-drawer #drawer class="example-sidenav" color="primary" mode="side" opened>
-      <p>Menu Select</p>      
+      <mat-list role="list">
+        <mat-list-item role="listitem"><a  [routerLink]="['/user', user_id]" class="active">Course List</a></mat-list-item>
+        <mat-list-item role="listitem"><a  [routerLink]="['/user', user_id]" class="">Profile</a></mat-list-item>
+        <mat-list-item role="listitem"><a  [routerLink]="['/auth/login']" class="">Logout</a></mat-list-item>
+      </mat-list>
+           
     </mat-drawer>
       <div class="example-sidenav-content">
             <!-- <button mat-button mat-raised-button color="primary" type="button" (click)="drawer.toggle()">

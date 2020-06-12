@@ -6,6 +6,7 @@ import { userComponent } from './user.component';
 import { ExtraModule } from '../extra/extra.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatButtonModule } from "@angular/material/button";
+import {  MatListModule } from "@angular/material/list";
 import { AppServiceService } from '../app-service.service';
 import { MatCardModule } from '@angular/material/card';
 import { StoreModule } from "@ngrx/store";
@@ -19,6 +20,7 @@ import { MatIconModule } from '@angular/material'
     CommonModule,
     ExtraModule,
     userRouterModule,
+    MatListModule,
     MatSidenavModule,
     MatCardModule,
     MatIconModule,

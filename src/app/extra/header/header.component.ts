@@ -2,6 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 // import { EventEmitter } from 'events';
 import { AppServiceService } from '../../app-service.service'
 import { Router } from "@angular/router";
+import { AngularFirestore } from '@angular/fire/firestore'
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -14,18 +16,18 @@ user:any;
 notifications:any;
 @Output() themeChang = new EventEmitter();
   constructor(
-    private api:AppServiceService,
-    private _router:Router
+    private _api:AppServiceService,
+    private _router:Router,
+    private fs:AngularFirestore
   ) {
     this.user = JSON.parse(localStorage.getItem('user'));
    }
 
-  ngOnInit() {
-     this.api.get("notification").then(res=>{
-      this.notifications = res;
-    }).catch(err=>{
-      this.notifications = ['Error in notification'];
+  ngOnInit() { 
+    this._api.getData('notification').then(res=>{
+      this.notifications = [res[0].payload.doc.data()];
     });
+      console.log('-------------->', this.notifications)
   }
   
   themeChange(val){

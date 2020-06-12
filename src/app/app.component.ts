@@ -5,7 +5,6 @@ import { AppServiceService } from './app-service.service';
 import { Router, RouterModule } from '@angular/router';
 import { HeaderComponent } from './extra/header/header.component';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,6 +15,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   items: any = [];
   mydata: any;
   theme:string="theme3";
+  loader:Boolean = false;
   // @ViewChild(HeaderComponent) childReference;
   constructor(
     private fireApi: AppServiceService
@@ -25,6 +25,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     // this.mydata = this.fireApi.addData('user', { "active": 1, "email": "shri@gmail.com", "firstname": "shk", "lastname": "kant", "phone": "9876512121", "rate": "5", "userid": "00112", "username": "shri" });
     // console.log("Add Data:", this.mydata);
+    this.fireApi.loader.subscribe(res=>{
+      this.loader = res[0].toggle;
+    })
   }
   ngAfterViewInit(){
     // this.theme = this.childReference.HeaderComponent;

@@ -22,18 +22,41 @@ coursesList:any = [];
   }
   ngOnInit() {
 
-    this._store.dispatch({type:'USER_LIST'})
-    this._store.subscribe(res=>{
+    // this._store.dispatch({type:'USER_LIST'})
+    // this._store.subscribe(res=>{
       
-      this.coursesList = res.courses;
-      console.log(this.coursesList);
-    })
-    // console.log(this.userId);
-    // this._api.get('cources').then(res=>{
-    //   this.coursesList = res;
-    // }).catch(err=>{
-    //   console.log(err)
-    // }) 
+    //   this.coursesList = res.courses;
+    //   console.log(this.coursesList);
+    // })
+    // console.log();
+    
+    this._api.getData('cources').then(res=>{
+        this.coursesList = res;
+        console.log('-----------Before ----------->', this.coursesList);
+
+      });
+    // console.log(this.coursesList);
   }
+
+
+  addCourse(){
+    let data = {
+      active :1, 
+      content_id:120164,
+      course_id:"cs001262",
+      course_name:"Data Scientist",
+      course_price:42000,
+      createdBy:"092221",
+      createdOn:new Date(),
+      description:"Data science is an inter-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from many structural and unstructured data. Data science is related to data mining, deep learning and big data.",
+      duration:16,
+      start_at:new Date(),
+      teachers:["00921","009421"],
+      volume:1
+    }
+    this._api.addData('cources',data).then(res=>console.log(res));
+  }
+
+
 
 }

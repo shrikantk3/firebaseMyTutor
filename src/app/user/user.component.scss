@@ -5,13 +5,13 @@
     height: 88vh;
     // background-color:map-get($theme, $primary); 
   }
-  
+  a{font-size:inherit; text-decoration:none;}
   .example-sidenav-content {
     display: flex;
     flex-direction: column;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
   }
   
   .example-sidenav {

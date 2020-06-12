@@ -8,6 +8,7 @@ import { firebaseConfig } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { AppDirectiveDirective } from './app-directive.directive';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 @NgModule({
   declarations: [
@@ -27,9 +29,11 @@ import { AppDirectiveDirective } from './app-directive.directive';
     AngularFireModule.initializeApp(firebaseConfig),
     AppRoutingModule,
     AngularFireAnalyticsModule,
+    AngularFireDatabaseModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+    MatProgressSpinnerModule,
     RouterModule,
     BrowserAnimationsModule,
     MatSidenavModule,

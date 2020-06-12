@@ -1,0 +1,36 @@
+<p *ngIf="!comments">No comment here.</p>
+<ul class="comment-list" *ngFor="let items of comments">
+    <li class="media">
+        <article class="content">
+          <label class="media-left" style="font-size:0; background-image:url('../../../assets/user.jpg');" >
+            {{items?.data?.userid}}
+          </label>
+        <p class="media-body">
+          <b [appUserFullName]="items?.data?.userid"></b><br>
+          {{items?.data?.text}}</p>
+        </article>
+        <ul *ngIf="items.data.reply" >
+          <li class="media">
+            <article class="content">
+              <label class="media-left" style="background-image:url('../../../assets/user.jpg');">{{items?.data?.reply_id}}</label>
+            <p class="media-body">
+              <b [appUserFullName]="items?.data?.reply_id"></b><br>
+              {{items?.data?.reply}}</p>
+            </article>
+          </li>
+        </ul>
+    </li>
+</ul>
+<form [formGroup]="ngCommnetfrm" (submit)="onCommentSubmit(ngCommnetfrm)">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Comment here.." formControlName="text"  class="example-full-width" style="height:43px;">
+        <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error> -->
+      </mat-form-field>&nbsp;&nbsp;
+    <!-- <input matInput type="text"  placeholder="Comment here."/> -->
+    <button mat-raised-button color="primary" type="submit">Save</button>
+</form>
